@@ -32,19 +32,7 @@ const diagonalizeMatrix = function(matrix) {
 };
 
 
-const diagonalizeMatrixReverse = function(matrix) {
-  const mirrorMatrix = [];
-  for (let row of matrix) {
-    mirrorMatrix.push(row.reverse());
-  }
-  return diagonalizeMatrix(mirrorMatrix);
-};
-
-
-module.exports = {
-  diagonalizeMatrix,
-  diagonalizeMatrixReverse
-};
+module.exports = diagonalizeMatrix;
 
 /*
 
@@ -68,7 +56,7 @@ const printMatrix = (matrix) => {
   }
 };
 
-printMatrix(diagonalizeMatrixReverse([
+printMatrix(diagonalizeMatrix([
   [1, 2, 3, 4],
   [1, 2, 3, 4],
   [1, 2, 3, 4],
@@ -77,7 +65,7 @@ printMatrix(diagonalizeMatrixReverse([
 
 console.log('----');
 
-printMatrix(diagonalizeMatrixReverse([
+printMatrix(diagonalizeMatrix([
   [1, 2],
   [3, 4],
   [5, 6]
@@ -85,7 +73,7 @@ printMatrix(diagonalizeMatrixReverse([
 
 console.log('----');
 
-printMatrix(diagonalizeMatrixReverse([
+printMatrix(diagonalizeMatrix([
   [1, 2, 3],
   [4, 5, 6]
 ]));

@@ -1,7 +1,4 @@
-const {
-  diagonalizeMatrix,
-  diagonalizeMatrixReverse
-} = require('./diagonalizeMatrix');
+const  diagonalizeMatrix = require('./diagonalizeMatrix');
 const transpose = require('./transposeMatrix');
 
 
@@ -27,7 +24,7 @@ const wordSearch = (letters, word) => {
     findWord(letters, word)
         || findWord(transpose(letters), word)
         || findWord(diagonalizeMatrix(letters), word)
-        || findWord(diagonalizeMatrixReverse(letters), word)
+        || findWord(diagonalizeMatrix(letters.reverse()), word)
   );
 };
 
