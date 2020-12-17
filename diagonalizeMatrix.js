@@ -46,9 +46,18 @@ module.exports = {
   diagonalizeMatrixReverse
 };
 
+/*
+
+ * Logic reference for this algorithm :
+ * https://youtu.be/T8ErAYobcbc
+ 
+ */
 
 
 
+// Test Code
+// =========
+/*
 // Do not edit this function.
 const printMatrix = (matrix) => {
   for (const row of matrix) {
@@ -86,10 +95,4 @@ console.log('----');
 // printMatrix(diagonalizeMatrix([
 //   [1, 2, 3, 4, 5, 6, 7]
 // ]));
-
-/*
-
- * Logic reference for this algorithm :
- * https://youtu.be/T8ErAYobcbc
- 
- */
+*/
