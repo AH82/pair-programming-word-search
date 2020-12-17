@@ -1,12 +1,11 @@
-const { should, expect } = require('chai');
 const chai = require('chai');
 const assert = chai.assert;
 
-const wordSearch = require('../wordsearch.js')
+const wordSearch = require('../wordsearch.js');
 
 describe("#wordSearch()", function() {
   it("should throw an error if array is empty", function() {
-    const fn = () => wordSearch([], 'SEINFELD')
+    const fn = () => wordSearch([], 'SEINFELD');
 
     assert.throws(fn, "Array must not be empty");
   });
@@ -14,8 +13,8 @@ describe("#wordSearch()", function() {
   it("should throw an error if array is not 2-dimentional", function() {
     const fn = () => wordSearch(
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
-      'SEINFELD')
-    assert.throws(fn, "Array is not 2D")
+      'SEINFELD');
+    assert.throws(fn, "Array is not 2D");
   });
 
   it("should return false if the word is not present", function() {
@@ -29,7 +28,7 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], 'FRANK')
+    ], 'FRANK');
 
     assert.isFalse(result);
   });
@@ -45,7 +44,7 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], 'SEINFELD')
+    ], 'SEINFELD');
 
     assert.isTrue(result);
   });
@@ -61,7 +60,7 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], 'LREYSCHW')
+    ], 'LREYSCHW');
 
     assert.isTrue(result);
   });
@@ -77,7 +76,7 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], 'LDLGLBISL')
+    ], 'LDLGLBISL');
 
     assert.isTrue(result);
   });
@@ -93,7 +92,7 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], 'QKANYEQFQ')
+    ], 'QKANYEQFQ');
 
     assert.isTrue(result);
   });
@@ -115,7 +114,7 @@ describe("#wordSearch()", function() {
       assert.isTrue(wordSearch(array,'EDTE')); // SW -> NE
     });
     it("South-East to North-West direction and its opposite", () => {
-      assert.isTrue(wordSearch(array,'BBC')); // NW -> SE 
+      assert.isTrue(wordSearch(array,'BBC')); // NW -> SE
       assert.isTrue(wordSearch(array,'GAEQ')); // SE -> NW
     });
   });

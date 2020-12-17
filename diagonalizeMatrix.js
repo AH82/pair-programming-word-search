@@ -4,28 +4,28 @@ const diagonalizeMatrix = function(matrix) {
 
   const diagonalResult = [];
   
-  for (let k = 0; k < matrix.length; k++){
-    const row = []
-    i = k;
-    j = 0;
+  for (let k = 0; k < matrix.length; k++) {
+    const row = [];
+    let i = k;
+    let j = 0;
     while (i >= 0 && j < matrix[i].length) {
-      row.push(matrix[i][j])
+      row.push(matrix[i][j]);
       i--;
       j++;
     }
-    diagonalResult.push(row)
+    diagonalResult.push(row);
   }
   
   for (let k = 1; k < matrix[0].length; k++) {
-    const row = []
-    i = matrix.length - 1;
-    j = k;
-    while ( j < matrix[0].length) {
+    const row = [];
+    let i = matrix.length - 1;
+    let j = k;
+    while (j < matrix[0].length) {
       row.push(matrix[i][j]);
       i--;
-      j++
+      j++;
     }
-    diagonalResult.push(row)
+    diagonalResult.push(row);
   }
 
   return diagonalResult;
@@ -35,10 +35,10 @@ const diagonalizeMatrix = function(matrix) {
 const diagonalizeMatrixReverse = function(matrix) {
   const mirrorMatrix = [];
   for (let row of matrix) {
-    mirrorMatrix.push(row.reverse())
+    mirrorMatrix.push(row.reverse());
   }
-  return diagonalizeMatrix(mirrorMatrix)
-}
+  return diagonalizeMatrix(mirrorMatrix);
+};
 
 
 module.exports = {
@@ -87,9 +87,9 @@ console.log('----');
 //   [1, 2, 3, 4, 5, 6, 7]
 // ]));
 
-/* 
+/*
 
- * Logic reference for this algorithm : 
- * https://youtu.be/T8ErAYobcbc 
+ * Logic reference for this algorithm :
+ * https://youtu.be/T8ErAYobcbc
  
  */
